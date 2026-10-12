@@ -1,0 +1,50 @@
+@startuml Diagrama de Caso de Uso - API REST Baozi Store
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Usuario da API" as Usuario
+
+rectangle "API REST - Baozi Store" {
+
+  package "Cliente" {
+    usecase "Cadastrar cliente\n(POST /clientes)" as UC1
+    usecase "Listar clientes\n(GET /clientes)" as UC2
+    usecase "Consultar cliente por ID\n(GET /clientes/{id})" as UC3
+    usecase "Atualizar cliente\n(PUT /clientes/{id})" as UC4
+    usecase "Apagar cliente\n(DELETE /clientes/{id})" as UC5
+  }
+
+  package "Produto" {
+    usecase "Cadastrar produto\n(POST /produtos)" as UC6
+    usecase "Listar produtos\n(GET /produtos)" as UC7
+    usecase "Consultar produto por ID\n(GET /produtos/{id})" as UC8
+    usecase "Atualizar produto\n(PUT /produtos/{id})" as UC9
+    usecase "Apagar produto\n(DELETE /produtos/{id})" as UC10
+  }
+
+  package "Pedido" {
+    usecase "Registrar pedido\n(POST /pedidos)" as UC11
+    usecase "Listar pedidos\n(GET /pedidos)" as UC12
+    usecase "Consultar pedido por ID\n(GET /pedidos/{id})" as UC13
+    usecase "Atualizar pedido\n(PUT /pedidos/{id})" as UC14
+    usecase "Apagar pedido\n(DELETE /pedidos/{id})" as UC15
+  }
+}
+
+Usuario --> UC1
+Usuario --> UC2
+Usuario --> UC3
+Usuario --> UC4
+Usuario --> UC5
+Usuario --> UC6
+Usuario --> UC7
+Usuario --> UC8
+Usuario --> UC9
+Usuario --> UC10
+Usuario --> UC11
+Usuario --> UC12
+Usuario --> UC13
+Usuario --> UC14
+Usuario --> UC15
+
+@enduml
